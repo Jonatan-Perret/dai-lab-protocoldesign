@@ -12,13 +12,13 @@
         </mxCell>
         <mxCell id="thxO_3UihhuIJi4jBLEb-3" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="thxO_3UihhuIJi4jBLEb-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="120" y="680" as="sourcePoint" />
+            <mxPoint x="120" y="720" as="sourcePoint" />
             <mxPoint x="440" y="340" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="thxO_3UihhuIJi4jBLEb-4" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="679.5" y="680" as="sourcePoint" />
+            <mxPoint x="680" y="720" as="sourcePoint" />
             <mxPoint x="679.5" y="120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -79,8 +79,8 @@
         </mxCell>
         <mxCell id="FQUlptxUDOTu7tvyOP3G-5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="120" y="760" as="sourcePoint" />
-            <mxPoint x="680" y="760" as="targetPoint" />
+            <mxPoint x="120" y="680" as="sourcePoint" />
+            <mxPoint x="680" y="680" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="FQUlptxUDOTu7tvyOP3G-6" value="Close TCP conneciton" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FQUlptxUDOTu7tvyOP3G-5">
