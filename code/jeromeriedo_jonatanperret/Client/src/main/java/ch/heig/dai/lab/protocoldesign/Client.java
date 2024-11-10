@@ -9,7 +9,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Client {
-    private final static String SERVER_DEFAULT_ADDRESS = "127.0.0.0";
+    private final static String SERVER_DEFAULT_ADDRESS = "127.0.0.1";
     private final static int SERVER_DEFAULT_PORT = 1234;
     private final String serverAddress;
     private final int serverPort;
