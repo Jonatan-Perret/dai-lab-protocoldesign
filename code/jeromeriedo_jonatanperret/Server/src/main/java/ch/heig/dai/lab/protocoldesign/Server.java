@@ -10,24 +10,46 @@ import java.net.Socket;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class Server {
-
-    final int SERVER_PORT = 1234;
+    private final static int SERVER_DEFAULT_PORT = 1234;
+    int serverPort = SERVER_DEFAULT_PORT;
 
     // list of supported commands
     final String[] COMMANDS = {"ADD", "SUB", "MUL"};
 
     public static void main(String[] args) {
+        System.out.println("Server: starting...");
+        
+        int serverPort = SERVER_DEFAULT_PORT;
+        if (args.length > 0) {
+            try {
+                serverPort = Integer.parseInt(args[0]);
+            } catch (NumberFormatException e) {
+                System.out.println("Server: invalid port number: " + args[0]);
+                System.exit(1);
+            }
+        }
+
         // Create a new server and run it
-        Server server = new Server();
+        Server server = new Server(serverPort);
         server.run();
+
+        System.out.println("Server: stopping...");
     }
 
-    void run() {
-        try (ServerSocket serverSocket = new ServerSocket(1234)) {
+    public Server() {
+    }
+
+    public Server(int serverPort) {
+        this.serverPort = serverPort;
+    }
+
+    public void run() {
+        try (ServerSocket serverSocket = new ServerSocket(this.serverPort)) {
+            System.out.println("Server: listening on port " + this.serverPort);
             while (true) {
 
                 try (Socket socket = serverSocket.accept(); var in = new BufferedReader(new InputStreamReader(socket.getInputStream(), UTF_8)); var out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream(), UTF_8))) {
-
+                    System.out.println("Server: client connected");
                     // welcome message with the list of supported commands
                     String welcome = "SUPPORTED " + String.join(" ", COMMANDS) + "\n";
                     out.write(welcome);
