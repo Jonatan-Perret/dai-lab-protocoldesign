@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 
 public class ServerTest {
 
+    final int SERVER_DEFAULT_PORT = 1234;
+
     @Test
     public void testAddIntOperation() {
         Server server = new Server();
